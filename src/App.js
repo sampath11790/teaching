@@ -4,6 +4,7 @@ import FormElement from "./component/Form/FormElement";
 import Hooksfun from "./component/Hooksfun/Hooksfun";
 import Listitem from "./component/listItm/Listitem";
 import Some from "./component/some/some";
+import Test from "./component/Test/Test";
 const users = [
   {
     id: 1,
@@ -29,10 +30,17 @@ const users = [
 function App() {
   // var aaaaaaa = 10;
   var sign = true;
+  var myname = "sampath";
+  function receive(data) {
+    console.log("parent data function", data);
+  }
 
   return (
     <div>
       <h1 className="headcolor">welcome</h1>
+      <Test mynamedata={myname} parentfun={receive}>
+        {" "}
+      </Test>
       <FormElement userdata={users}></FormElement>
       <Hooksfun> </Hooksfun>
       {sign && <Some></Some>}
@@ -40,6 +48,6 @@ function App() {
     </div>
   );
 }
-
+// receive()
 export default App;
 // style={{ color: "green" }}

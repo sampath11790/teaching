@@ -27,9 +27,11 @@ import React, { Fragment } from "react";
 
 const Button = ({ myname }) => {
   let myval = myname ? myname : "submit";
+
   return (
     <Fragment>
       {/* <button>{myname ?.myname : "submit"}</button> */}
+
       <button>{myval}</button>
     </Fragment>
   );
